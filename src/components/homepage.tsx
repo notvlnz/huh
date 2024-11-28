@@ -20,7 +20,7 @@ export function Homepage() {
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center justify-center p-4 text-white">
-      <div className="max-w-6xl w-full bg-[#121212] backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
+      <div className="max-w-6xl w-full bg-gradient-to-br from-[#121212] to-[#2a2a2a] rounded-2xl p-8 shadow-2xl">
         <h1 className="text-4xl font-bold mb-6 text-center">Riskful&apos;s Webhook Proxy</h1>
         <p className="text-xl mb-8 text-center">
           Seamlessly proxy Discord webhooks through Vercel, primarily for Roblox.
@@ -38,9 +38,9 @@ export function Homepage() {
                 value={inputUrl}
                 onChange={handleInputChange}
                 placeholder="https://discord.com/api/webhooks/..."
-                className="flex-grow px-4 py-2 rounded-l-lg bg-[#121212] focus:outline-none focus:ring-2 focus:ring-white"
+                className="flex-grow px-4 py-2 rounded-l-lg bg-[#1a1a1a] focus:outline-none focus:ring-2 focus:ring-white"
               />
-              <div className="bg-[#121212] px-4 py-2 rounded-r-lg">
+              <div className="bg-[#1a1a1a] px-4 py-2 rounded-r-lg">
                 <ArrowRight className="w-6 h-6" />
               </div>
             </div>
@@ -56,11 +56,11 @@ export function Homepage() {
                 type="text"
                 value={outputUrl}
                 readOnly
-                className="flex-grow px-4 py-2 rounded-l-lg bg-[#121212]"
+                className="flex-grow px-4 py-2 rounded-l-lg bg-[#1a1a1a]"
               />
               <button
                 onClick={() => navigator.clipboard.writeText(outputUrl)}
-                className="bg-[#121212] px-4 py-2 rounded-r-lg hover:bg-[#333333] transition-colors"
+                className="bg-[#333333] px-4 py-2 rounded-r-lg hover:bg-[#444444] transition-colors"
               >
                 Copy
               </button>
@@ -96,7 +96,7 @@ export function Homepage() {
             href="https://discord.com/invite/riskful"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-white to-[#121212] text-white rounded-full font-semibold hover:bg-[#333333] transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-[#333333] text-white rounded-full font-semibold hover:bg-[#444444] transition-colors"
           >
             <CircleCheck className="w-4 h-4 mr-2" />
             Join The Discord
@@ -105,7 +105,7 @@ export function Homepage() {
             href="https://github.com/star-ot/simple-discord-webhooks-proxy"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-white to-[#121212] text-[#121212] rounded-full font-semibold hover:bg-[#f1f1f1] transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-[#333333] text-white rounded-full font-semibold hover:bg-[#444444] transition-colors"
           >
             <Github className="w-5 h-5 mr-2" />
             View source on GitHub
@@ -123,9 +123,9 @@ export function Homepage() {
 
 function Feature({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
   return (
-    <div className="bg-[#121212] rounded-xl p-6 transition-all hover:bg-[#333333] flex flex-col h-full">
+    <div className="bg-[#1a1a1a] rounded-xl p-6 transition-all hover:bg-[#333333] flex flex-col h-full">
       <div className="flex items-center mb-4">
-        <div className="mr-4 p-2 bg-[#000000] rounded-full">{icon}</div>
+        <div className="mr-4 p-2 bg-[#121212] rounded-full">{icon}</div>
         <h3 className="text-lg font-semibold">{title}</h3>
       </div>
       <p className="text-sm text-white/80 flex-grow">{description}</p>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
-import { ArrowRight, Check, Github, Globe, Shield, Zap, Triangle } from 'lucide-react'
+import { ArrowRight, Check, Github, Globe, Shield, Zap } from 'lucide-react'
 
 export function Homepage() {
   const [inputUrl, setInputUrl] = useState('')
@@ -93,13 +93,13 @@ export function Homepage() {
 
         <div className="flex flex-col items-center space-y-4">
           <a
-            href="https://vercel.com/new/clone?repository-url=https://github.com/star-ot/simple-discord-webhooks-proxy"
+            href="https://discord.com/invite/your-discord-link"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-purple-700 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors"
           >
-            <Triangle className="w-4 h-4 mr-2 fill-current" />
-            Deploy 
+            <i className="fab fa-discord text-xl mr-2"></i>
+            Discord
           </a>
           <a
             href="https://github.com/star-ot/simple-discord-webhooks-proxy"
@@ -115,7 +115,7 @@ export function Homepage() {
       <footer className="mt-8 text-sm text-white/70 flex items-center justify-center">
         <span className="mr-1">Inspired by Lewisakura&apos;s </span>
         <a href="https://github.com/lewisakura/webhook-proxy" className="hover:underline mr-4">Webhook Proxy</a>
-        <span>Made with ❤️ by <a target="_blank" href="https://starvsk.dev">vlnzi</a></span>
+        <span>Made with ❤️ by <a target="_blank" href="https://starvsk.dev">@vlnzi</a> &amp; <a target="_blank" href="https://twitter.com/ftyarr">@ftyarr</a></span>
       </footer>
     </div>
   )
@@ -132,4 +132,5 @@ function Feature({ icon, title, description }: { icon: React.ReactNode; title: s
     </div>
   )
 }
+
 

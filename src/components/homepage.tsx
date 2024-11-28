@@ -21,7 +21,7 @@ export function Homepage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-600 flex flex-col items-center justify-center p-4 text-white">
       <div className="max-w-6xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
-        <h1 className="text-4xl font-bold mb-6 text-center">Riskful's Webhook Proxy</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center">Riskful&apos;s Webhook Proxy</h1>
         <p className="text-xl mb-8 text-center">
           Seamlessly proxy Discord webhooks through Vercel, primarily for Roblox.
         </p>
@@ -72,17 +72,17 @@ export function Homepage() {
           <Feature
             icon={<Zap className="w-8 h-8" />}
             title="Easy to Integrate"
-            description={`Simply replace discord.com with ${proxyDomain} in your webhook URL when sending. That's it.`}
+            description={`Simply replace discord.com with ${proxyDomain} in your webhook URL when sending. That&apos;s it.`}
           />
           <Feature
             icon={<Globe className="w-8 h-8" />}
             title="Globally Distributed"
-            description="Powered by Vercel's global network, ensuring high availability and low latency across multiple continents."
+            description="Powered by Vercel&apos;s global network, ensuring high availability and low latency across multiple continents."
           />
           <Feature
             icon={<Shield className="w-8 h-8" />}
             title="Complies with ToS"
-            description="Built to comply with Discord's terms of service by enforcing rate limits and implementing anti-abuse measures."
+            description="Built to comply with Discord&apos;s terms of service by enforcing rate limits and implementing anti-abuse measures."
           />
           <Feature
             icon={<Check className="w-8 h-8" />}
@@ -115,7 +115,7 @@ export function Homepage() {
       <footer className="mt-8 text-sm text-white/70 flex items-center justify-center">
         <span className="mr-1">Inspired by Lewisakura&apos;s </span>
         <a href="https://github.com/lewisakura/webhook-proxy" className="hover:underline mr-4">Webhook Proxy</a>
-        <span>Made with ❤️ by <a target = "_blank" href="https://starvsk.dev">vlnzi</a></span>
+        <span>Made with ❤️ by <a target="_blank" href="https://starvsk.dev">vlnzi</a></span>
       </footer>
     </div>
   )
@@ -132,3 +132,4 @@ function Feature({ icon, title, description }: { icon: React.ReactNode; title: s
     </div>
   )
 }
+

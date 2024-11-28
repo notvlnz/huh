@@ -1,27 +1,27 @@
-"use client";
+"use client"
 
-import { useState, useEffect } from "react";
-import { ArrowRight, Check, Github, Globe, Shield, Zap, Triangle, Discord } from "lucide-react";
+import { useState, useEffect } from 'react'
+import { ArrowRight, Check, Github, Globe, Shield, Zap, CirclePlus } from 'lucide-react'
 
 export function Homepage() {
-  const [inputUrl, setInputUrl] = useState("");
-  const [outputUrl, setOutputUrl] = useState("");
-  const [proxyDomain, setProxyDomain] = useState("");
+  const [inputUrl, setInputUrl] = useState('')
+  const [outputUrl, setOutputUrl] = useState('')
+  const [proxyDomain, setProxyDomain] = useState('')
 
   useEffect(() => {
-    setProxyDomain(window.location.hostname);
-  }, []);
+    setProxyDomain(window.location.hostname)
+  }, [])
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newInputUrl = e.target.value;
-    setInputUrl(newInputUrl);
-    setOutputUrl(newInputUrl.replace("discord.com", proxyDomain));
-  };
+    const newInputUrl = e.target.value
+    setInputUrl(newInputUrl)
+    setOutputUrl(newInputUrl.replace('discord.com', proxyDomain))
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-600 to-blue-600 flex flex-col items-center justify-center p-4 text-white">
       <div className="max-w-6xl w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
-        <h1 className="text-4xl font-bold mb-6 text-center">Riskful's Webhook Proxy</h1>
+        <h1 className="text-4xl font-bold mb-6 text-center">Riskful&apos;s Webhook Proxy</h1>
         <p className="text-xl mb-8 text-center">
           Seamlessly proxy Discord webhooks through Vercel, primarily for Roblox.
         </p>
@@ -72,17 +72,17 @@ export function Homepage() {
           <Feature
             icon={<Zap className="w-8 h-8" />}
             title="Easy to Integrate"
-            description={`Simply replace discord.com with ${proxyDomain} in your webhook URL when sending. That's it.`}
+            description={`Simply replace discord.com with ${proxyDomain} in your webhook URL when sending. That&apos;s it.`}
           />
           <Feature
             icon={<Globe className="w-8 h-8" />}
             title="Globally Distributed"
-            description="Powered by Vercel's global network, ensuring high availability and low latency across multiple continents."
+            description="Powered by Vercel&apos;s global network, ensuring high availability and low latency across multiple continents."
           />
           <Feature
             icon={<Shield className="w-8 h-8" />}
             title="Complies with ToS"
-            description="Built to comply with Discord's terms of service by enforcing rate limits and implementing anti-abuse measures."
+            description="Built to comply with Discord&apos;s terms of service by enforcing rate limits and implementing anti-abuse measures."
           />
           <Feature
             icon={<Check className="w-8 h-8" />}
@@ -91,18 +91,16 @@ export function Homepage() {
           />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-          {/* Discord Button */}
+        <div className="flex flex-col items-center space-y-4">
           <a
-            href="https://discord.com/invite/your-discord-link"
+            href="https://vercel.com/new/clone?repository-url=https://github.com/star-ot/simple-discord-webhooks-proxy"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-purple-700 text-white rounded-full font-semibold hover:bg-purple-600 transition-colors"
+            className="inline-flex items-center px-6 py-3 bg-black text-white rounded-full font-semibold hover:bg-gray-800 transition-colors"
           >
-            <Discord className="w-5 h-5 mr-2" />
-            Discord
+            <CirclePlus className="w-4 h-4 mr-2 fill-current" />
+            Join The Discord
           </a>
-          {/* GitHub Button */}
           <a
             href="https://github.com/star-ot/simple-discord-webhooks-proxy"
             target="_blank"
@@ -110,19 +108,9 @@ export function Homepage() {
             className="inline-flex items-center px-6 py-3 bg-white text-purple-600 rounded-full font-semibold hover:bg-opacity-90 transition-colors"
           >
             <Github className="w-5 h-5 mr-2" />
-            GitHub
+            View source on GitHub
           </a>
-        </div>
-      </div>
-      <footer className="mt-8 text-sm text-white/70 flex items-center justify-center">
-        <span className="mr-1">Inspired by Lewisakura&apos;s </span>
-        <a href="https://github.com/lewisakura/webhook-proxy" className="hover:underline mr-4">
-          Webhook Proxy
-        </a>
-        <span>Made with ❤️ by <a target="_blank" href="https://starvsk.dev">@vlnzi</a> & <a target="_blank" href="https://github.com/ftyarr">@ftyarr</a></span>
-      </footer>
-    </div>
-  );
+  )
 }
 
 function Feature({ icon, title, description }: { icon: React.ReactNode; title: string; description: string }) {
@@ -134,7 +122,7 @@ function Feature({ icon, title, description }: { icon: React.ReactNode; title: s
       </div>
       <p className="text-sm text-white/80 flex-grow">{description}</p>
     </div>
-  );
+  )
 }
 
 
